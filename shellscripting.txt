@@ -1,0 +1,108 @@
+soooooo....
+what is shell if thats the thing you are wondering...
+so shell is basically a interface that gives you access to control the OS you are running...could be gui or cli based....some cli based shell is BASH(Bourne Again Shell),which we will be learning....other cli based shells are zsh,csh/tcsh,ksh etc....
+
+so now what is bash scripting?
+its like you know what a Computer and now you wanna ask computer programming....
+scripting means you want to give the computer/shell some commands and thats about it...
+
+you might wanna know about some basic linux commands before diving in the world of bashscripting...
+
+# Display the current directory
+pwd
+
+# List files and directories
+ls
+
+# Change directory
+cd /path/to/directory
+
+# Create a new directory
+mkdir new_directory
+
+# Copy a file
+cp source_file destination_file
+
+# Move or rename a file
+mv old_name new_name
+
+# Delete a file
+rm file_to_delete
+
+# Display the contents of a file
+cat file_to_view
+
+# Display the current date and time
+date
+
+# Nano text editor:
+nano file_name
+
+# Delay
+delay time_in_ms
+
+# to install a package:
+sudo apt install package_name
+
+# to update an existing package:
+sudo apt update package_name
+
+# to CREATE a file:
+touch file_name
+
+#to show a message or integer to terminal:
+echo "if_it_is_a_string"
+echo if_it_is_a_command_or_integer
+
+#####################################################################################################################################################3
+###########################################################################################################################################################################################################
+
+
+
+
+		NOW WE WILL SEE SOME STUFF ABOUT SCRIPTING
+
+you can use all those commands stated above to implement in your script....
+after all thats what scripting is all about...AUTOMATING COMMANDS...
+
+#################################################################################################################
+
+declare a variable: my_var=18 or my_var="a_string_that can have space"	(remember no space between this statement)
+ avariable can also include a  command or path 
+my_var=htop or my_var=/usr/bin/htop
+
+dereference operator: $
+so to echo things(I mean the variables) you do: echo "$my_var" ,Shows the value within my_var
+
+return value/exit code:
+every statement returns a value in bash
+if the command is successful terminal by-default returns 0
+an unsuccessful one return othen than zero value...
+BUT OF COURSE yOU CAN SET A DEFINITE RETURN VALUE WHILE WRITING YOUR OWN SCRIPT
+like: exit 199(returns 199 as output)
+how to check it? type: echo $?
+yeah thats it $?....
+
+conditional if and else:
+syntax:
+
+if [ $my_var -eq 18 ]
+then
+	echo "Adult"
+else
+	echo "Child"
+fi
+
+yeah thats it...remind the spaces...inside the [ ] we compare or checck a condition
+some operators and its meaning...
+
+-eq: Checks if two integers are equal.
+-ne: Checks if two integers are not equal.
+-lt: Checks if one integer is less than another.
+-le: Checks if one integer is less than or equal to another.
+-gt: Checks if one integer is greater than another.
+-ge: Checks if one integer is greater than or equal to another.
+
+thats it for day1
+################################################################################################################################################################
+###########################################################################################################################################################
