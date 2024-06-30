@@ -39,7 +39,7 @@ date
 nano file_name
 
 # Delay
-delay time_in_ms
+sleep time_in_seconds
 
 # to install a package:
 sudo apt install package_name
