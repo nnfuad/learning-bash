@@ -1,0 +1,19 @@
+this is not a bash file so, we dont need need to use the SHEBANG
+
+so, to store important bash scripts and use em like commands we need to store them at:
+/usr/local/bin
+so itll go like 
+sudo mv <filename OR old filedir> <newFIledir>
+to change the file access from user to system we need to do:
+sudo chown root:root <newFileDir>
+
+
+
+like we have a file at /usr named 'update.sh'....and we are at home dir which is /usr...haha...                      
+
+
+sudo mv update.sh /usr/local/bin/update
+sudo chown root:root /usr/local/bin/update
+
+BOOM! now you can run the script like a command by just typing 'update'(dont use the '' :) )
+AND YEAH, linux doesnt need extensions to recognize files....HAHAHAHAHAHAHHAHAHA
