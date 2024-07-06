@@ -1,0 +1,38 @@
+there are three kinds of data streams:
+1.Standard output(file descriptor: 1)
+2.Standard error(file descriptor: 2)
+3.standard input(file descriptor: 0)
+
+. Redirection
+
+        •       Redirecting Output: Use > to redirect stdout to a file, and 2> to redirect stderr to a file.
+command > output.txt   # Redirect stdout to output.txt
+command 2> error.txt   # Redirect stderr to error.txt
+command &> all_output.txt # Redirect both stdout and stderr to all_output.txt (bash specific)
+
+
+
+        •       Appending Output: Use >> to append stdout to a file.
+command >> output.txt  # Append stdout to output.txt
+
+
+
+        •       Redirecting Input: Use < to redirect stdin from a file.
+command < input.txt    # Redirect stdin from input.txt
+
+Examples
+
+Basic Redirection:
+echo "Hello, World!" > hello.txt  # Write "Hello, World!" to hello.txt
+cat hello.txt                     # Display the contents of hello.txt
+
+Appending Data:
+echo "This is a test." >> hello.txt  # Append "This is a test." to hello.txt
+cat hello.txt                        # Display the updated contents of hello.txt
+
+
+bash
+find /etc -type f                    #shows all files on /etc dir...it may(most prolly will) include files user dont have permission
+find /etc -type f 2> /dev/null       #shows all files on /etc dir but redirects permission denied files(file descriptor 2(errors)) to /dev/null(the black whole of linux,we could also store em in text files...But...now you know what /dev/null is..)
+find /etc -type f 1> /dev/null       #shows all files on /etc dir but redirects accessible files(file descriptor 1(stdoutput)) to /dev/null...effectively meaning showing files that are not permitted to access...
+find /etc -type f > /dev/null        #same as 1> /dev/null
